@@ -9,10 +9,10 @@ public class Cylinder : ClaseBase
 
     void Start()
     {
-        Manager.OnStartMovement += StartMove;
+        Manager.OnStartMovement += StartMoveHandler;
     }
 
-    public void StartMove()
+    public void StartMoveHandler()
     {
         InvokeRepeating(nameof(Move), delayStartTeleport, timeIntervalTeleport);
     }

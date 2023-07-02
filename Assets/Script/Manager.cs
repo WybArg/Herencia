@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-    public delegate void DelStartMovementHandler();
-    public static event DelStartMovementHandler OnStartMovement;
+    public delegate void DelStartMovement();
+    public static event DelStartMovement OnStartMovement;
 
 
     void Update()
