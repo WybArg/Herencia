@@ -9,7 +9,7 @@ public class Capsule : ClaseBase
 
     void Start()
     {
-        Manager.OnStartMovement += StartMove;
+        Manager.OnStartMovement += StartMoveHandler;
     }
 
 
@@ -18,7 +18,7 @@ public class Capsule : ClaseBase
         if (move) Move();
     }
 
-    public void StartMove()
+    public void StartMoveHandler()
     {
         move = true;
     }

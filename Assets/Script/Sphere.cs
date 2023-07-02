@@ -8,7 +8,7 @@ public class Sphere : ClaseBase
     private int reverseY = 1;
     void Start()
     {
-        Manager.OnStartMovement += StartMove;
+        Manager.OnStartMovement += StartMoveHandler;
     }
 
 
@@ -17,7 +17,7 @@ public class Sphere : ClaseBase
         if (move) Move();
     }
 
-    public void StartMove()
+    public void StartMoveHandler()
     {
         move = true;
         InvokeRepeating(nameof(MoveZigZag), 2, 2);

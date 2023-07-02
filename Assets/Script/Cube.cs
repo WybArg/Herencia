@@ -6,7 +6,7 @@ public class Cube : ClaseBase
 {
     void Start()
     {
-        Manager.OnStartMovement += StartMove;
+        Manager.OnStartMovement += StartMoveHandler;
     }
 
 
@@ -15,7 +15,7 @@ public class Cube : ClaseBase
         if (move) Move();
     }
 
-    public void StartMove()
+    public void StartMoveHandler()
     {
         move = true;
     }
